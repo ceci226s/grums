@@ -90,7 +90,7 @@ header {
 }
 
 header > * {
-  grid-column: 2 / -2;
+  grid-column: 2 / 0;
 }
 
 header p {
@@ -152,38 +152,28 @@ figcaption {
 
 /* ----- Video/iframe ----- */
 
-.video {
+
+.iframe-wrapper {
   position: relative;
   width: 100%;
   height: 0;
-  padding-top: calc(100% / (16 / 9));
-  box-shadow: -1rem 1rem #fff;
+  padding-top: 56.25%;
 }
 
 iframe {
   position: absolute;
   inset: 0;
-  width: 100%;
   height: 100%;
-}
-
-@supports (aspect-ratio: 16 / 9) {
-  .video {
-    display: contents;
-  }
-  iframe {
-    position: revert;
-    inset: revert;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    box-shadow: -1rem 1rem #fff;
-  }
+  width: 100%;
 }
 
 video {
+  width: 100%;
+  height: auto;
+  display: block;
   box-shadow: -1rem 1rem #fff;
 }
+
 
 /* ----- Galleri v1 ----- */
 
@@ -244,9 +234,9 @@ video {
 footer {
   display: grid;
   place-content: center;
-  color: #fff;
+  color: #294D53;
   padding: 3rem 1rem;
-  background: #294D53;
+  background: #fff;
   font-weight: 900;
   border-top: 1px solid #fff2;
 }
